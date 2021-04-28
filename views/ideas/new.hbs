@@ -1,0 +1,21 @@
+<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Title </label>
+        <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+     <label for="sekect" class="form-label">Status </label>
+    <select class="form-select" name="status" id="select" >
+        <option value="2">Public</option>
+        <option value="1">Private</option> 
+    </select>
+    <div class="mb-3 mt-4 form-check">
+        <input type="checkbox" name="comments" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Allow comments</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Add idea</button>
+</form>

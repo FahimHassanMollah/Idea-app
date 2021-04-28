@@ -39,11 +39,35 @@ const ideas = [
 
 ]
 
+// all idea show route
 app.get('/ideas', function (req, res) {
     res.render('ideas/index',{
         ideas
     });
 });
+
+// new idea add  route
+app.get('/ideas/new',(req,res) => {
+  
+    res.render('ideas/new');
+})
+
+// single idea show route
+app.get('/ideas/:id', function (req, res) {
+    const ideaId = Number.parseInt(req.params.id);
+    let idea = ideas.find(idea =>idea.id === ideaId)
+    if (idea) {
+        res.render('ideas/show',{
+            idea
+        })
+    }
+    else {
+        res.render('notFound')
+    }
+});
+
+
+
 app.get('/about', function (req, res) {
     res.render('about');
 });
